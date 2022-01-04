@@ -1,8 +1,10 @@
 body{
     margin: 0px;
+    min-width:200px;
 }
 
 #title{
+    user-select:none;
     display: flex;
     align-items: center;
     position: absolute;
@@ -49,30 +51,40 @@ body{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-#left-banner{
-    position: absolute;
-    left: 0%;
-    bottom: 0%;
-    width: 15%;
-    height: 78%;
+.main-container{
+    height:10000px;
+    width:100%;
+    top:22%;
+    position:absolute;
+}
+
+section{
+    height:100%;
+    top:0%;
+}
+
+.side-banner{
+    height:780px;
+    width:15%;
     background-image: url("images/vertical_banner.png"); 
-    transform: scaleX(-1);
     filter:brightness(50%);
-    background-size: 100%;
+    background-size: cover;
+    position:fixed;
+    background-repeat: no-repeat;
+}
+
+#left-banner{
+    left: 0%;
+    transform: scaleX(-1);
 }
 
 #right-banner{
-    position: absolute;
     right: 0%;
-    bottom: 0%;
-    width: 15%;
-    height: 78%;
-    background-image: url("images/vertical_banner.png"); 
-    filter:brightness(50%);
-    background-size: 100%;
 }
 
 #picture-section{
     width: 70%;
     left: 15%;
+    position:absolute;
+    background: linear-gradient(to bottom, red, blue);
 }
