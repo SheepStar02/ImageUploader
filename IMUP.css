@@ -1,0 +1,78 @@
+body{
+    margin: 0px;
+}
+
+#title{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(75, 161, 222), rgb(169, 207, 235));
+    background-size: 100%;
+    background-repeat:no-repeat;
+    width: 100%;
+    height: 22%;
+    top: 0%;
+    text-shadow: 2px 2px black;
+    border-bottom: 5px solid gold;
+    z-index: 10;
+}
+
+#titlename{
+    margin: 0;
+    font-size: 40px;
+    border: 10px;
+    padding:10px;
+    border-radius: 45px;
+    border-style: solid;
+    border-color:rgb(111, 218, 236);
+    color: rgb(218, 230, 62);
+    position: absolute;
+    left: 3.5%
+}
+
+#upload-button{
+    position: absolute;
+    right: 6.5%;
+}
+
+.buttons{
+    cursor: pointer;
+    font-size: 10px;
+    background-color: rgb(167, 238, 178);
+    border-radius: 12px;
+    border: 2px solid rgb(70, 199, 238);
+    transition-duration: 0.4s;
+}
+
+.buttons:hover {
+    background-color: rgb(238, 236, 124);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#left-banner{
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 15%;
+    height: 78%;
+    background-image: url("images/vertical_banner.png"); 
+    transform: scaleX(-1);
+    filter:brightness(50%);
+    background-size: 100%;
+}
+
+#right-banner{
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    width: 15%;
+    height: 78%;
+    background-image: url("images/vertical_banner.png"); 
+    filter:brightness(50%);
+    background-size: 100%;
+}
+
+#picture-section{
+    width: 70%;
+    left: 15%;
+}
