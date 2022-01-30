@@ -6,6 +6,6 @@ document.onreadystatechange = () => {
 
 function loadDocument () {
     document.querySelector(".buttons").onclick = function () {
-        window.open("/upload");
+        window.open("/upload", "_self");
     }
 }
