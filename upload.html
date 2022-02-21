@@ -5,6 +5,9 @@
         <base href = "/">
         <link rel="stylesheet" type = "text/css" href="/static/styles/upload.css">
         <script src = "/static/scripts/upload.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+        <script src = "/static/scripts/firebaseinit.js"></script>
         <title>Image Uploader</title>
         <div id = "title">
             <h1 id = "titlename"> IMUP </h1>
@@ -22,7 +25,7 @@
             </section>
             
             <section id = "upload-box">
-                <p></p>
+                <img class = "image-loader">
             </section>
 
             <section id = "right-banner" class = "side-banner">
@@ -31,7 +34,10 @@
 
         <div>
             <section id = "upload-button-box">
-                <button id = "upload-button" class = "buttons" data-state = "upload">UPLOAD</button>
+                <label class="upload-button buttons">
+                    <input type="file"/>
+                    UPLOAD
+                </label>
             </section>
         </div>
     </body>
