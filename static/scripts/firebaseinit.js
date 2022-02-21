@@ -12,7 +12,3 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // Use the shorthand notation to access the default project's Firebase services
-const firestore = firebase.firestore();
-firestore.collection("ImageUploader").doc("Images").get().then(data => {
-    console.log(data.data());
-})
