@@ -31,7 +31,7 @@ function ButtonPaths () {
             let result = Reader.result;
 
             firebase.firestore().collection("ImageUploader").doc("Images").update(
-                { ImageContainer : result},
+                { ImageContainer : firebase.firestore.FieldValue.arrayUnion(result)},
                 { merge : true }
             ).then(() => {
                 document.querySelector(".image-loader").src = result;

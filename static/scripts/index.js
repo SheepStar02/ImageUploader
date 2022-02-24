@@ -11,8 +11,11 @@ function loadDocument () {
     }
     firestore.collection("ImageUploader").doc("Images").get().then(data => {
         for(let image of data.data().ImageContainer) {
+            let oframe = document.createElement("div");
             let frame = document.createElement("img");
-            document.querySelector("#picture-section").appendChild(frame);
+            document.querySelector("#inner-picture-cont").appendChild(oframe);
+            oframe.appendChild(frame);
+            oframe.classList.add("biggerframe");
             frame.src = image;
         }
     })
