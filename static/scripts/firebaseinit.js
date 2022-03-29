@@ -10,5 +10,4 @@ const firebaseConfig = {
 
 // Initialize Firebase with a default Firebase project
 firebase.initializeApp(firebaseConfig);
-
-// Use the shorthand notation to access the default project's Firebase services
+ 

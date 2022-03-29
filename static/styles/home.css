@@ -1,17 +1,19 @@
 body{
     margin: 0px;
     min-width:200px;
+    overflow-x:hidden;
+    overflow-y:overlay;
 }
 
 #title{
     user-select:none;
     display: flex;
     align-items: center;
-    position: absolute;
+    position: relative;
     background-size: 100%;
     background-repeat:no-repeat;
     width: 100%;
-    height: 15%;
+    height: 15vh;
     top: 0%;
     text-shadow: 2px 2px black;
     z-index: 10;
@@ -24,10 +26,22 @@ body{
     padding:10px;
     border-radius: 45px;
     border-style: solid;
-    border-color:rgb(111, 218, 236);
+    border-color:rgba(111, 217, 236, 0.336);
     color: rgb(218, 230, 62);
     position: absolute;
-    left: 3.5%
+    left: 3.5%;
+    animation: animateLogo 5s linear infinite;
+}
+
+@keyframes animateLogo {
+    0%{
+        border-color:rgba(111, 217, 236, 0.336);
+        color: rgb(218, 230, 62);
+    }
+    50%{
+        border-color:rgb(111, 217, 236);
+        color: rgb(166, 230, 62);
+    }
 }
 
 #upload-button{
@@ -40,8 +54,8 @@ body{
     font-size: 10px;
     background-color: rgb(167, 238, 178);
     border-radius: 12px;
-    border: 2px solid rgb(70, 199, 238);
-    transition-duration: 0.4s;
+    border: 5px solid rgba(70, 199, 238, 0.733);
+    transition-duration: 0.3s;
 }
 
 .buttons:hover {
@@ -49,30 +63,14 @@ body{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+.main-container, #title{
+    min-width:500px;
+    overflow-x:hidden;
+}
+
 .main-container{
-    height:10000px;
-    width:100%;
-    top:20%;
-    position:absolute;
-}
-
-section{
-    height:100%;
-    top:0%;
-}
-
-.side-banner{
-    height:100vh;
-    width:15%;
-    filter:brightness(50%);
-    background-size: cover;
-    position:fixed;
-    background-repeat: no-repeat;
-}
-
-#left-banner{
-    left: 0%;
-    transform: scaleX(-1);
+    position:relative;
+    margin-top:5%;
 }
 
 #right-banner{
@@ -80,14 +78,17 @@ section{
 }
 
 #picture-section{
-    width: 70%;
-    left: 15%;
-    position:absolute;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    width:80%;
+    gap:15px;
+    margin-bottom:5%;
 }
 
 #background{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color:rgba(141, 241, 248, 0.39);
     background-image: url("/static/images/backgroundpicture.jpg");
     background-size: cover;
@@ -96,19 +97,39 @@ section{
 
 #inner-picture-cont{
     width: 100%;
-    position: absolute;
-    display: grid;
-    gap: 10px;
-    grid-auto-flow: column;
+    display: flex;
+    flex-direction:column;
+    gap:15px;
 }
 
 .biggerframe{
-    padding: 10px;
-    background-color: grey;
-    max-width: 250px;
+    padding: min(8px, 10%);
+    background-color: rgba(108, 190, 170, 0.521);
+    box-shadow: 0 0 12px rgba(0,0,0,0.9);
+    max-width: 350px;
+    border-radius:5px;
 }
 
 img{
-    max-width: 250px;
-    min-width: 250px;
+    width:100%;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background:linear-gradient(#2E3772, #977BBE);
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+::-webkit-scrollbar-thumb:hover{
+    -webkit-box-shadow: inset 0 0 6px rgb(0,0,0); 
+    background:rgba(116, 108, 190, 0.267);
 }

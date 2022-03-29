@@ -10,13 +10,13 @@ function loadDocument () {
         window.open("/upload", "_self");
     }
     firestore.collection("ImageUploader").doc("Images").get().then(data => {
-        for(let image of data.data().ImageContainer) {
+        data.data().ImageContainer.forEach((image, index, container) => {
             let oframe = document.createElement("div");
             let frame = document.createElement("img");
-            document.querySelector("#inner-picture-cont").appendChild(oframe);
             oframe.appendChild(frame);
             oframe.classList.add("biggerframe");
             frame.src = image;
-        }
+            document.querySelectorAll("#inner-picture-cont")[index%3].appendChild(oframe);
+        })
     })
 }

@@ -9,6 +9,11 @@
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
         <script src = "/static/scripts/firebaseinit.js"></script>
         <title>Image Uploader</title>
+    </head>
+
+    <body>
+        <div id="background">
+        </div>
         <div id = "title">
             <h1 id = "titlename"> IMUP </h1>
             <div id = "home-button">
@@ -17,22 +22,12 @@
                     </button>
             </div>
         </div>
-    </head>
-
-    <body>
         <div class = "main-container">
-            <section id = "left-banner" class = "side-banner">
-            </section>
-            
             <section id = "upload-box">
-                <img class = "image-loader">
+                <div class = "image-container">
+                    <img class = "image-loader">
+                </div>
             </section>
-
-            <section id = "right-banner" class = "side-banner">
-            </section>
-        </div>
-
-        <div>
             <section id = "upload-button-box">
                 <label class="upload-button buttons">
                     <input type="file"/>
@@ -40,5 +35,6 @@
                 </label>
             </section>
         </div>
+
     </body>
 </html>
